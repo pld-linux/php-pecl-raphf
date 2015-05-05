@@ -4,7 +4,7 @@
 Summary:	%{modname} - Resource and persistent handles factory
 Name:		%{php_name}-pecl-%{modname}
 Version:	1.0.4
-Release:	1
+Release:	2
 License:	BSD, revised
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -26,7 +26,7 @@ In PECL status of this extension is: %{status}.
 Summary:	Header files for raphf PECL extension
 Group:		Development/Libraries
 # does not require base
-Requires:	php-devel >= 4:5.2.0
+Requires:	%{php_name}-devel >= 4:5.2.0
 
 %description devel
 Header files for raphf PECL extension.
@@ -51,7 +51,7 @@ cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
 extension=%{modname}.so
 EOF
 
-install -D php_raphf.h $RPM_BUILD_ROOT%{_includedir}/php/ext/raphf/php_raphf.h
+install -p -D php_raphf.h $RPM_BUILD_ROOT%{_includedir}/php/ext/raphf/php_raphf.h
 
 %clean
 rm -rf $RPM_BUILD_ROOT
