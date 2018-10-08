@@ -3,12 +3,12 @@
 %define		status		stable
 Summary:	%{modname} - Resource and persistent handles factory
 Name:		%{php_name}-pecl-%{modname}
-Version:	1.0.4
-Release:	2
+Version:	2.0.0
+Release:	1
 License:	BSD, revised
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
-# Source0-md5:	e5e7e5c3954a5fd31c034c347f22c4a5
+# Source0-md5:	bc465eb5caa9d0f09cced121a8ac2e8e
 URL:		http://pecl.php.net/package/raphf/
 BuildRequires:	%{php_name}-devel >= 3:5.3.0
 BuildRequires:	rpmbuild(macros) >= 1.650
